@@ -1,0 +1,51 @@
+<div class='hero'>
+  <div class='container'>
+    <h1>Signup Confirmation</h1>
+  </div>
+</div>
+<div class='container content'>
+  <div class='row'>
+    <div class='span16'>
+      <% if (typeof(error) != 'undefined') { %>
+        <p>
+          <%= error %>
+        </p>
+      <% } else { %>
+        <p>
+  		    Thank you for registering for Silicon Valley Prep! You have successfully been registered.
+        </p>
+        <!-- <p>
+          <ul>
+            <% var classes = [], times = [];
+            for (var key in data) {
+              if (data[key] == 'on') {
+                if (key == 'sat101' || key == 'sat25' || key == 'sun101' || key == 'sun25') {
+                  times.push(timeNames[key]);
+                } else {
+                  classes.push(classNames[key]);
+                }
+              }
+            }
+          
+            for (var i = 0, len = classes.length; i < len; i++) { %>
+              <li><%= classes[i] %></li>
+            <% } %>
+          </ul>
+        </p>
+        <p>
+          And the available times you selected are:
+        </p>
+        <p>
+          <ul>
+            <% for (var i = 0, len = times.length; i < len; i++) { %>
+              <li><%= times[i] %></li>
+            <% } %>
+          </ul>
+        </p> -->
+        <p>
+          We will send you an email confirmation by <b>April 15</b> to confirm your placement and times of the courses you selected.
+        </p>
+      <% } %>
+    </div>
+  </div>
+</div>

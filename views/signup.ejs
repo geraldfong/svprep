@@ -1,0 +1,218 @@
+<div class='hero'>
+  <div class='container'>
+    <h1>Sign Up</h1>
+  </div>
+</div>
+<div class='container content'>
+  <div style="margin-bottom:30px;">
+    <p>
+      Welcome to the sign-up page! You may sign your child up for up to <b>four</b> classes <b>each session</b>. Classes cost a flat rate of $400, which you do not have to pay today! We will e-mail you before the first week of classes to confirm the total cost of the program after subtracting all your discounts; you are not obligated to pay anything until the day of the first class! Additionally, the first day of class is <b>absolutely FREE</b>. If you don't want to continue the program after the first class, we will give you a <b>FULL refund</b>, no questions asked.
+    </p>
+	  <p>
+      Please select classes based on the day and time drop-down menus below. Given the nature of our classes, we can only offer certain courses if there is sufficient interest. As classes are contingent upon demand and instructor availabilities, we will confirm your child’s enrollment as soon as possible, and a final confirmation email will be sent at the latest on <b>April 16th</b>.
+    </p>
+    <p>
+      If you have any further questions, do not hesitate to contact us at contact@svprep.org! Thank you for choosing Silicon Valley Prep; we will be in touch via e-mail as the program start dates approach.
+    </p>
+  </div>
+  <form class="form-horizontal" method="post" action="/signup-confirm">
+    <fieldset>
+      <!-- <div class="control-group">
+        <label class="control-label" for="optionsCheckbox">Availability (please select all possible availabilities -- based on your selection, we will place your child into an appropriate time slot)</label>
+        <div class="controls">
+          <label class="checkbox">
+            <input type="checkbox" id="timings" name="sat101">
+            Saturdays 10AM - 1PM
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="timings" name="sat25">
+            Saturdays 2PM - 5PM
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="timings" name="sun101">
+            Sundays 10AM - 1PM
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="timings" name="sun25">
+            Sundays 2PM - 5PM
+          </label>
+        </div>
+      </div> -->
+      <!-- <legend>Controls Bootstrap supports</legend> -->
+      <div class="control-group">
+        <label class="control-label" for="optionsCheckbox">Courses - <b>Session A<br /><i>(June 16 - July 15)</i></b></label>
+        <div class="controls">
+          <div class="row">
+            <div class="span6 center">
+              <center><h5>Saturday 10AM - 1PM</h5></center>
+              <select id="sat101-a" name="sat101-a" class="span5">
+                <option value="noclass-sat101-a">No class selected</option>
+                <option value="java-sat101-a-sj">Intro to Java & Computer Science - grades 6-10</option>
+                <option value="amc1012-sat101-a-sj">Preparation for AMC 10 & AMC 12 - grades 8-12</option>
+                <!-- <option value="java-sat101-a-f">Intro to Java & Computer Science - grades 6-8 (Milpitas)</option>
+                <option value="pubsp-sat101-a-f">Public Speaking - grades 4-6 (Milpitas)</option>
+                <option value="debarg-sat101-a-f">Debate & Argumentation - grades 6-9 (Milpitas)</option> -->
+              </select>
+            </div>
+            <div class="span6 center courses-separator-vertical">
+              <center><h5>Sunday 10AM - 1PM</h5></center>
+              <select id="sun101-a" name="sun101-a" class="span5">
+                <option value="noclass-sun101-a">No class selected</option>
+                <option value="pubsp-sun101-a-sj">Public Speaking - grades 4-6</option>
+                <option value="debarg-sun101-a-sj">Debate & Argumentation - grades 6-9</option>
+              </select>
+            </div>
+          </div>
+          <hr class="courses-separator-horizontal">
+          <div class="row">
+            <div class="span6 center">
+              <center><h5>Saturday 2PM - 5PM</h5></center>
+              <select id="sat25-a" name="sat25-a" class="span5">
+                <option value="noclass-sat25-a">No class selected</option>
+                <option value="pubsp-sat25-a-sj">Public Speaking - grades 7-9</option>
+                <option value="debarg-sat25-a-sj">Debate & Argumentation - grades 6-9</option>
+                <option value="mcamc8-sat25-a-sj">Preparation for MathCounts & AMC 8 - grades 5-8</option>
+                <!-- <option value="physsat2-sat25-a-sj">Small Group Tutoring for AP Physics C - grades 9-12</option> -->
+                <!-- <option value="mathsat2-sat25-a-sj">Small Group Tutoring to Prepare for the Pre-Calculus Placement Exam - grades 9-12</option> -->
+                <!-- <option value="java-sat25-a-f">Intro to Java & Computer Science - grades 9-12 (Milpitas)</option>
+                <option value="pubsp-sat25-a-f">Public Speaking - grades 7-9 (Milpitas)</option> -->
+              </select>
+            </div>
+            <div class="span6 center courses-separator-vertical">
+              <center><h5>Sunday 2PM - 5PM</h5></center>
+              <select id="sun25-a" name="sun25-a" class="span5">
+                <option value="noclass-sun25-a">No class selected</option>
+                <option value="java-sun25-a-sj">Intro to Java & Computer Science - grades 6-10</option>
+                <option value="writjourn-sun25-a-sj">Essay Writing & Journalism - grades 5-9</option>
+                <!-- <option value="hssuper-sun25-a-sj">How to be a Highschool Superstar - grades 9-11</option> -->
+                <!-- <option value="chemsat2-sun25-a-sj">Small Group Tutoring for AP Chemistry - grades 9-12</option> -->
+                <!-- <option value="biosat2-sun25-a-sj">Small Group Tutoring for AP Biology - grades 9-12</option> -->
+              </select>
+            </div>
+          </div>
+          <hr class="session-separator-horizontal" id="sun101">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="optionsCheckbox">Courses - <b>Session B<br /><i>(July 21 - August 16)</i></b></label>
+        <div class="controls">
+          <div class="row">
+            <div class="span6 center">
+              <center><h5>Saturday 10AM - 1PM</h5></center>
+              <select id="sat101-b" name="sat101-b" class="span5">
+                <option value="noclass-sat101-b">No class selected</option>
+                <option value="java-sat101-b-sj">Intro to Java & Computer Science - grades 6-10</option>
+                <option value="amc1012-sat101-b-sj">Preparation for AMC 10 & AMC 12 - grades 8-12</option>
+                <!-- <option value="java-sat101-b-f">Intro to Java & Computer Science - grades 6-8 (Milpitas)</option>
+                <option value="pubsp-sat101-b-f">Public Speaking - grades 4-6 (Milpitas)</option>
+                <option value="debarg-sat101-b-f">Debate & Argumentation - grades 6-9 (Milpitas)</option> -->
+              </select>
+            </div>
+            <div class="span6 center courses-separator-vertical">
+              <center><h5>Sunday 10AM - 1PM</h5></center>
+              <select id="sun101-b" name="sun101-b" class="span5">
+                <option value="noclass-sun101-b">No class selected</option>
+                <option value="pubsp-sun101-b-sj">Public Speaking - grades 4-6</option>
+                <option value="debarg-sun101-b-sj">Debate & Argumentation - grades 6-9</option>
+              </select>
+            </div>
+          </div>
+          <hr class="courses-separator-horizontal">
+          <div class="row">
+            <div class="span6 center">
+              <center><h5>Saturday 2PM - 5PM</h5></center>
+              <select id="sat25-b" name="sat25-b" class="span5">
+                <option value="noclass-sat25-b">No class selected</option>
+                <option value="pubsp-sat25-b-sj">Public Speaking - grades 7-9</option>
+                <option value="debarg-sat25-b-sj">Debate & Argumentation - grades 6-9</option>
+                <option value="mcamc8-sat25-b-sj">Preparation for MathCounts & AMC 8 - grades 5-8</option>
+                <!-- <option value="physsat2-sat25-b-sj">Small Group Tutoring for AP Physics C - grades 9-12</option> -->
+                <!-- <option value="mathsat2-sat25-b-sj">Small Group Tutoring to Prepare for the Pre-Calculus Placement Exam - grades 9-12</option> -->
+                <!-- <option value="java-sat25-b-f">Intro to Java & Computer Science - grades 9-12 (Milpitas)</option>
+                <option value="pubsp-sat25-b-f">Public Speaking - grades 7-9 (Milpitas)</option> -->
+              </select>
+            </div>
+            <div class="span6 center courses-separator-vertical">
+              <center><h5>Sunday 2PM - 5PM</h5></center>
+              <select id="sun25-b" name="sun25-b" class="span5">
+                <option value="noclass-sun25-b">No class selected</option>
+                <option value="java-sun25-b-sj">Intro to Java & Computer Science - grades 6-10</option>
+                <option value="writjourn-sun25-b-sj">Essay Writing & Journalism - grades 5-9</option>
+                <!-- <option value="hssuper-sun25-b-sj">How to be a Highschool Superstar - grades 9-11</option> -->
+                <!-- <option value="chemsat2-sun25-b-sj">Small Group Tutoring for AP Chemistry - grades 9-12</option> -->
+                <!-- <option value="biosat2-sun25-b-sj">Small Group Tutoring for AP Biology - grades 9-12</option> -->
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Student Information</label>
+        <div class="controls">
+          <input type="text" class="input-medium" id="student-first-name" name="studentFirstName" value="First Name" onfocus="if (this.value=='First Name') this.value = ''" onblur="if (this.value.length == 0) this.value='First Name'">
+          <input type="text" class="input-medium" id="student-last-name" name="studentLastName" value="Last Name" onfocus="if (this.value=='Last Name') this.value = ''" onblur="if (this.value.length == 0) this.value='Last Name'">
+          <input type="text" class="input-medium" id="student-email" name="studentEmail" value="Email" onfocus="if (this.value=='Email') this.value = ''" onblur="if (this.value.length == 0) this.value='Email'">
+          <input type="text" class="input-medium" id="student-cell-phone" name="studentCellPhone" value="Cell Phone (optional)" onfocus="if (this.value=='Cell Phone (optional)') this.value = ''" onblur="if (this.value.length == 0) this.value='Cell Phone (optional)'">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="select01">Grade (in Fall 2012)</label>
+        <div class="controls">
+          <select id="select01" name="grade" style="width: 300px;">
+            <option>Please select an option</option>
+            <option>Kindergarten</option>
+            <option>1st</option>
+            <option>2nd</option>
+            <option>3rd</option>
+            <option>4th</option>
+            <option>5th</option>
+            <option>6th</option>
+            <option>7th</option>
+            <option>8th</option>
+            <option>9th</option>
+            <option>10th</option>
+            <option>11th</option>
+            <option>12th</option>
+          </select>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Home Information</label>
+        <div class="controls">
+          <input type="text" class="input-large" id="street" name="street" value="Street Address" onfocus="if (this.value=='Street Address') this.value = ''" onblur="if (this.value.length == 0) this.value='Street Address'">
+          <input type="text" class="input-medium" id="city" name="city" value="City" onfocus="if (this.value=='City') this.value = ''" onblur="if (this.value.length == 0) this.value='City'">
+          <input type="text" class="input-small" id="zip" name="zip" value="Zip Code" onfocus="if (this.value=='Zip Code') this.value = ''" onblur="if (this.value.length == 0) this.value='Zip Code'">
+          <input type="text" class="input-medium" id="home-phone" name="homePhone" value="Home Phone" onfocus="if (this.value=='Home Phone') this.value = ''" onblur="if (this.value.length == 0) this.value='Home Phone'">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Parent 1 Information</label>
+        <div class="controls">
+          <input type="text" class="input-medium" id="p1-first-name" name="p1FirstName" value="First Name" onfocus="if (this.value=='First Name') this.value = ''" onblur="if (this.value.length == 0) this.value='First Name'">
+          <input type="text" class="input-medium" id="p1-last-name" name="p1LastName" value="Last Name" onfocus="if (this.value=='Last Name') this.value = ''" onblur="if (this.value.length == 0) this.value='Last Name'">
+          <input type="text" class="input-medium" id="p1-email" name="p1Email" value="Email" onfocus="if (this.value=='Email') this.value = ''" onblur="if (this.value.length == 0) this.value='Email'">
+          <input type="text" class="input-medium" id="p1-cell-phone" name="p1CellPhone" value="Cell Phone" onfocus="if (this.value=='Cell Phone') this.value = ''" onblur="if (this.value.length == 0) this.value='Cell Phone'">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Parent 2 Information (optional)</label>
+        <div class="controls">
+          <input type="text" class="input-medium" id="p2-first-name" name="p2FirstName" value="First Name" onfocus="if (this.value=='First Name') this.value = ''" onblur="if (this.value.length == 0) this.value='First Name' ">
+          <input type="text" class="input-medium" id="p2-last-name" name="p2LastName" value="Last Name" onfocus="if (this.value=='Last Name') this.value = ''" onblur="if (this.value.length == 0) this.value='Last Name' ">
+          <input type="text" class="input-medium" id="p2-email" name="p2Email" value="Email" onfocus="if (this.value=='Email') this.value = ''" onblur="if (this.value.length == 0) this.value='Email' ">
+          <input type="text" class="input-medium" id="p2-cell-phone" name="p2CellPhone" value="Cell Phone" onfocus="if (this.value=='Cell Phone') this.value = ''" onblur="if (this.value.length == 0) this.value='Cell Phone' ">          
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Referrer's Name or Coupon Code (optional)</label>
+        <div class="controls">
+          <input type="text" class="input-large" id="referrer-name" name="referrerName" value="Referrer's Name" onfocus="if (this.value=='Referrer\'s Name') this.value = ''" onblur="if (this.value.length == 0) this.value='Referrer\'s Name'">
+          <input type="text" class="input-large" id="coupon-code" name="couponCode" value="Coupon Code" onfocus="if (this.value=='Coupon Code') this.value = ''" onblur="if (this.value.length == 0) this.value='Coupon Code'">
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn success">Submit</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
