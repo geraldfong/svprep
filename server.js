@@ -36,23 +36,10 @@ db.open(function (error, conn) {
 var classNames = {
   "javacs-a": "Intro to Java & Computer Science - Session A",
   "javacs-b": "Intro to Java & Computer Science - Session B",
-  "circuitsee-a": "Intro to Circuits & Electrical Engineering - Session A",
-  "circuitsee-b": "Intro to Circuits & Electrical Engineering - Session B",
   "pubsp-a": "Public Speaking - Session A",
   "pubsp-b": "Public Speaking - Session B",
   "debarg-a": "Debate & Argumentation - Session A",
   "debarg-b": "Debate & Argumentation - Session B",
-  "writing-a": "Essay Writing & Journalism - Session A",
-  "writing-b": "Essay Writing & Journalism - Session B",
-  "mcamc8-a": "Preparation for MathCounts & AMC 8 - Session A",
-  "mcamc8-b": "Preparation for MathCounts & AMC 8 - Session B",
-  "amc1012-a": "Preparation for AMC 10 & AMC 12 - Session A",
-  "amc1012-b": "Preparation for AMC 10 & AMC 12 - Session B",
-  "mathsat2": "Preparation for Mathematics Level 2 SAT II",
-  "chemsat2": "Preparation for Chemistry SAT II",
-  "physsat2": "Preparation for Physics SAT II",
-  "bioesat2": "Preparation for Biology E SAT II",
-  "biomsat2": "Preparation for Biology M SAT II"
 }
 
 var timeNames = {
@@ -71,15 +58,14 @@ app.get('/signup', function (req, res) {
 });
 
 app.post('/signup-confirm', function (req, res) {
-	console.log(req.body);
+  console.log(req.body);
   var p1Email = req.body['p1Email'];
   // console.log(p1Email.match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/));
   if (p1Email.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i) != null) {
     signupsCollection.insert(req.body, function (error, docs) {
-      // res.render('signup-confirm', { page: 'signup' });
-  	  console.log('User data inserted successfuly!');
+      console.log('User data inserted successfuly!');
     });
-    mg.sendText("contact@svprep.org", p1Email, "Thank you for registering with Silicon Valley Prep!", "Hi!\n\nThank you for registering with Silicon Valley Prep. This is a confirmation that you have successfully registered. We will send you more information at this email as the program start dates approach. If you have any questions, comments, or concerns, please email us at contact@svprep.org.\n\nWe look forward to seeing you this summer!\n\nSincerely,\nCarl Shan and Ritik Malhotra\nCo-Founders, Silicon Valley Prep");
+    mg.sendText("contact@svprep.org", p1Email, "Thank you for registering with Silicon Valley Prep!", "Hi!\n\nThank you for registering with Silicon Valley Prep. This is a confirmation that you have successfully registered. We will send you more information at this email as the program start dates approach. If you have any questions, comments, or concerns, please email us at contact@svprep.org.\n\nWe look forward to seeing you this summer!\n\nSincerely,\nGerald Fong and Sharad Vikram\nSilicon Valley Prep");
     res.render('signup-confirm', { page: 'signup', timeNames: timeNames, classNames: classNames, data: req.body });
   } else {
     res.render('signup-confirm', { page: 'signup', error: "Signup failed! Please hit the 'Back' button on your browser and enter a valid email address for Parent 1." });
