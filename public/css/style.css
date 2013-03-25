@@ -160,11 +160,13 @@ body {
   margin-bottom: 18px;
   line-height: 1;
   border: 1.5px solid black;
+  height: 200px;
 }
 .carousel-inner {
   overflow: hidden;
   width: 100%;
   position: relative;
+  height: 200px;
 }
 .carousel .item {
   display: none;
@@ -1612,12 +1614,13 @@ table .headerSortUp.purple, table .headerSortDown.purple {
     background-color: rgba(255, 255, 255, 0.05);
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 .topbar h3 {
     position: relative;
 }
 .brand {
-	font-family: 'Montez', cursive;
+	font-family: 'Gilda Display', cursive;
 	color: black !important;
 	font-size: 26px !important;
 }
@@ -1729,6 +1732,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
     padding: 10px 8px 11px;
     line-height: 19px;
     text-decoration: none;
+    font-weight: bold;
 }
 .topbar div>ul a:hover, .nav a:hover {
     color: #fff;

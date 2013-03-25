@@ -9,6 +9,8 @@
 <meta name="keywords" content=""> 
 
 <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Gilda+Display|Libre+Baskerville' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
 <link href='/css/style.css' media='all' rel='stylesheet' type='text/css' />
 <link href='/css/print.css' media='print' rel='stylesheet' type='text/css' />
 <link href="/css/font-awesome.css" rel="stylesheet" type='text/css'>
@@ -40,6 +42,11 @@
             </a>
           </li>
           <li>
+            <a class='<%= page == "instructors" ? "btn disabled" : "" %>' href='/instructors'>
+              Instructors
+            </a>
+          </li>
+          <li>
             <a class='<%= page == "courses" ? "btn disabled" : "" %>' href='/courses'>
               Courses & Pricing
             </a>
@@ -62,11 +69,6 @@
           <li>
             <a class='<%= page == "discounts" ? "btn disabled" : "" %>' href='/discounts'>
               Discounts
-            </a>
-          </li>
-          <li>
-            <a class='<%= page == "instructors" ? "btn disabled" : "" %>' href='/instructors'>
-              Instructors
             </a>
           </li>
           <li>
