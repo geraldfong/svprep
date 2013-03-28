@@ -12,6 +12,8 @@
     "url": "git://github.com/geraldfong/svprep.git"
   },
   "dependencies": {
+    "ejs": "*",
+    "express": "2.x",
     "mongodb": "*",
     "mailgun": "*"
   },

@@ -6,7 +6,7 @@ var BSON = mongo.BSONPure;
 var Db = require('mongodb').Db;
 var Connection = require('mongodb').Connection;
 var Server = require('mongodb').Server;
-var app =  express.createServer();
+var app = express.createServer();
 
 app.configure(function() {
   app.use(express.cookieParser());
@@ -27,7 +27,7 @@ db.open(function (error, conn) {
   conn.collection('signups', function (error, coll) {
     signupsCollection = coll;
   });
-  
+
   conn.collection('tracking', function (error, coll) {
     trackingCollection = coll;
   });
@@ -70,7 +70,7 @@ app.post('/signup-confirm', function (req, res) {
   } else {
     res.render('signup-confirm', { page: 'signup', error: "Signup failed! Please hit the 'Back' button on your browser and enter a valid email address for Parent 1." });
   }
-  
+
 });
 
 /*
@@ -79,22 +79,22 @@ app.post('/signup-test', function (req, res) {
   var studentLastName = req.body.studentLastName;
   var studentEmail = req.body.studentEmail;
   var studentCellPhone = req.body.studentCellPhone;
-  
+
   var street = req.body.street;
   var city = req.body.city;
   var zip = req.body.zip;
   var homePhone = req.body.homePhone;
-  
+
   var p1FirstName = req.body.p1FirstName;
   var p1LastName = req.body.p1LastName;
   var p1Email = req.body.p1Email;
   var p1CellPhone = req.body.p1CellPhone;
-  
+
   var p2FirstName = req.body.p2FirstName;
   var p2LastName = req.body.p2LastName;
   var p2Email = req.body.p2Email;
   var p2CellPhone = req.body.p2CellPhone;
-  
+
   signupsCollection.insert({
     studentFirstName: studentFirstName,
     studentLastName: studentLastName,
@@ -115,7 +115,7 @@ app.post('/signup-test', function (req, res) {
   }, function (error, docs) {
     console.log("Inserted data successfully!");
   });
-  
+
   res.render('signup-confirm', { page: 'signup' });
 });
 */
@@ -160,4 +160,4 @@ app.get('/yc-video', function (req, res) {
   res.redirect('http://ritikm.posterous.com/private/EbDoxuqrxj');
 });
 
-app.listen(80);
+app.listen(8080);
