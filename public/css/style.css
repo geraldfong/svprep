@@ -160,13 +160,13 @@ body {
   margin-bottom: 18px;
   line-height: 1;
   border: 1.5px solid black;
-  height: 200px;
+  height: 250px;
 }
 .carousel-inner {
   overflow: hidden;
   width: 100%;
   position: relative;
-  height: 200px;
+  height: 250px;
 }
 .carousel .item {
   display: none;
