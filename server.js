@@ -1,3 +1,6 @@
+var https = require('https');
+var fs = require('fs');
+var crypto = require('crypto');
 var express = require('express');
 var mongo = require('mongodb');
 var Mailgun = require('mailgun').Mailgun;
@@ -8,6 +11,15 @@ var Connection = require('mongodb').Connection;
 var Server = require('mongodb').Server;
 var app = express.createServer();
 
+var options = {
+    key:    fs.readFileSync('svprep.org.key'),
+    cert:   fs.readFileSync('sharad.cert'),
+    ca:     fs.readFileSync('ca.pem'),
+    requestCert:        true,
+    rejectUnauthorized: false
+};
+var creds = crypto.createCredentials(options);
+//app.setSecure(creds);
 app.configure(function() {
   app.use(express.cookieParser());
   app.use(express.bodyParser());
@@ -160,4 +172,5 @@ app.get('/yc-video', function (req, res) {
   res.redirect('http://ritikm.posterous.com/private/EbDoxuqrxj');
 });
 
-app.listen(8080);
+https.createServer(app).listen(443);
+app.listen(80);
