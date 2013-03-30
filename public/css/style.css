@@ -2738,6 +2738,7 @@ body {
 	background: url(/images/hero-bg.png) repeat;
     border-bottom: 1px solid #e1e1e1;
     margin-bottom: 30px;
+    margin-top:27px;
     padding: 30px 0 31px;
 }
 .hero h1, .hero h2, .hero h3 {

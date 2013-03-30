@@ -114,7 +114,7 @@
             </div>
             <div class="span6 center courses-separator-vertical">
               <center><h5>Sunday 2PM - 5PM</h5></center>
-              <select id="sun25-a" name="sun25-b" class="span5">
+              <select id="sun25-b" name="sun25-b" class="span5">
                 <option value="noclass-sun25-b">No class selected</option>
                 <option value="java-sun25-b">Intro to Java & Computer Science - grades 7-10</option>
               </select>
@@ -204,9 +204,59 @@
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
           </div>
         </div>
+        <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+        <button type='button' class='btn' id="customButton">Pay with Credit Card</button>
+
+        <script>
+          $('#customButton').click(function(){
+            if (!($("#p1-email").val().match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i) != null)){
+                alert("Please enter valid email");
+            } else {
+                var token = function(res){
+                  var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+                  $('form').append($input).submit();
+                };
+                var amount = 0;
+                var classes = [
+                    $("#sat101-a").val(), 
+                    $("#sat25-a").val(), 
+                    $("#sat101-b").val(), 
+                    $("#sat25-b").val(), 
+                    $("#sun101-a").val(), 
+                    $("#sun25-a").val(), 
+                    $("#sun101-b").val(), 
+                    $("#sun25-b").val(), 
+                ];
+                for (var i = 0; i < classes.length; i++) {
+                    amount += getAmount(classes[i]);
+                }
+                console.log(amount);
+                
+
+                StripeCheckout.open({
+                  key:         'pk_test_czwzkTp2tactuLOEOqbMTRzG',
+                  amount:      amount*100,
+                  panelLabel:  'Checkout',
+                  token:       token
+                });
+                return false;
+            }
+          });
+          function getAmount(str) {
+            if (str.indexOf("noclass") == -1) {
+              return 450;
+            }
+            else {
+              return 0;
+            }
+          }
+        </script>
+        <!--
         <p>
           <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="pk_test_czwzkTp2tactuLOEOqbMTRzG"></script>
         </p>
+        -->
         <!--<div class='stripe'>
           <img src='/images/stripe.png' width='50px'>
         </div>-->
