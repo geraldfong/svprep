@@ -1,0 +1,272 @@
+<div class='hero'>
+  <div class='container'>
+    <h1>Sign Up</h1>
+  </div>
+</div>
+<div class='container content'>
+  <div style="margin-bottom:30px;">
+    <p>
+      欢迎来到注册网页！您可以登录您的孩子参加了每期四种课程。每种课程每期450元。您不必预付！在课程开始前的一个星期，我们会通知你总数额以及可能的折扣。如果你的孩子在第一节课后不喜欢课程，我们会不问任何问题给您全额退款。
+    </p>
+	  <p>
+      请选择在下拉菜单中的课程的时间。鉴于我们课程的性质，课程的开课与否取决于学生的住册人数，我们会尽快确认您的孩子是否能参加你住册的课程。我们将在4月16日发送最后一批确认电子邮件。
+    </p>
+    <p>
+      如果您有任何进一步的问题，请与我们联系。contact@svprep.org！感谢您选择SV Prep。
+    </p>
+  </div>
+  <form class="form-horizontal" method="post" action="/signup-confirm">
+    <fieldset>
+      <!-- <div class="control-group">
+        <label class="control-label" for="optionsCheckbox">Availability (please select all possible availabilities -- based on your selection, we will place your child into an appropriate time slot)</label>
+        <div class="controls">
+          <label class="checkbox">
+            <input type="checkbox" id="timings" name="sat101">
+            Saturdays 10AM - 1PM
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="timings" name="sat25">
+            Saturdays 2PM - 5PM
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="timings" name="sun101">
+            Sundays 10AM - 1PM
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="timings" name="sun25">
+            Sundays 2PM - 5PM
+          </label>
+        </div>
+      </div> -->
+      <!-- <legend>Controls Bootstrap supports</legend> -->
+      <div class="control-group">
+        <label class="control-label" for="optionsCheckbox">Courses - <b>Session A<br /><i>(June 16 - July 15)</i></b></label>
+        <div class="controls">
+          <div class="row">
+            <div class="span6 center">
+              <center><h5>Saturday 10AM - 1PM</h5></center>
+              <select id="sat101-a" name="sat101-a" class="span5">
+                <option value="noclass-sat101-a">No class selected</option>
+                <option value="java-sat101-a">Intro to Java & Computer Science - grades 7-10</option>
+                <option value="physmech-sat101-a">Introduction to Physics Mechanics - grades 7-10</option>
+              </select>
+            </div>
+            <div class="span6 center courses-separator-vertical">
+              <center><h5>Sunday 10AM - 1PM</h5></center>
+              <select id="sun101-a" name="sun101-a" class="span5">
+                <option value="noclass-sun101-a">No class selected</option>
+                <option value="pubsp-sun101-a">Public Speaking - grades 5-9</option>
+                <option value="debarg-sun101-a">Debate & Argumentation - grades 7-10</option>
+              </select>
+            </div>
+          </div>
+          <hr class="courses-separator-horizontal">
+          <div class="row">
+            <div class="span6 center">
+              <center><h5>Saturday 2PM - 5PM</h5></center>
+              <select id="sat25-a" name="sat25-a" class="span5">
+                <option value="noclass-sat25-a">No class selected</option>
+                <option value="esswrit-sat25-a">Essay Writing & Journalism - grades 5-9</option>
+                <option value="pubsp-sat25-a">Public Speaking - grades 5-9</option>
+              </select>
+            </div>
+            <div class="span6 center courses-separator-vertical">
+              <center><h5>Sunday 2PM - 5PM</h5></center>
+              <select id="sun25-a" name="sun25-a" class="span5">
+                <option value="noclass-sun25-a">No class selected</option>
+                <option value="java-sun25-a">Intro to Java & Computer Science - grades 7-10</option>
+              </select>
+            </div>
+          </div>
+          <hr class="session-separator-horizontal" id="sun101">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="optionsCheckbox">Courses - <b>Session B<br /><i>(June 21 - August 16)</i></b></label>
+        <div class="controls">
+          <div class="row">
+            <div class="span6 center">
+              <center><h5>Saturday 10AM - 1PM</h5></center>
+              <select id="sat101-b" name="sat101-b" class="span5">
+                <option value="noclass-sat101-b">No class selected</option>
+                <option value="java-sat101-b">Intro to Java & Computer Science - grades 7-10</option>
+                <option value="physmech-sat101-b">Introduction to Physics Mechanics - grades 7-10</option>
+              </select>
+            </div>
+            <div class="span6 center courses-separator-vertical">
+              <center><h5>Sunday 10AM - 1PM</h5></center>
+              <select id="sun101-b" name="sun101-b" class="span5">
+                <option value="noclass-sun101-b">No class selected</option>
+                <option value="pubsp-sun101-b">Public Speaking - grades 5-9</option>
+                <option value="debarg-sun101-b">Debate & Argumentation - grades 7-10</option>
+              </select>
+            </div>
+          </div>
+          <hr class="courses-separator-horizontal">
+          <div class="row">
+            <div class="span6 center">
+              <center><h5>Saturday 2PM - 5PM</h5></center>
+              <select id="sat25-b" name="sat25-b" class="span5">
+                <option value="noclass-sat25-b">No class selected</option>
+                <option value="esswrit-sat25-b">Essay Writing & Journalism - grades 5-9</option>
+                <option value="pubsp-sat25-b">Public Speaking - grades 5-9</option>
+              </select>
+            </div>
+            <div class="span6 center courses-separator-vertical">
+              <center><h5>Sunday 2PM - 5PM</h5></center>
+              <select id="sun25-b" name="sun25-b" class="span5">
+                <option value="noclass-sun25-b">No class selected</option>
+                <option value="java-sun25-b">Intro to Java & Computer Science - grades 7-10</option>
+              </select>
+            </div>
+          </div>
+          <hr class="session-separator-horizontal" id="sun101">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Student Information</label>
+        <div class="controls">
+          <input type="text" class="input-medium" id="student-first-name" name="studentFirstName" value="First Name" onfocus="if (this.value=='First Name') this.value = ''" onblur="if (this.value.length == 0) this.value='First Name'">
+          <input type="text" class="input-medium" id="student-last-name" name="studentLastName" value="Last Name" onfocus="if (this.value=='Last Name') this.value = ''" onblur="if (this.value.length == 0) this.value='Last Name'">
+          <input type="text" class="input-medium" id="student-email" name="studentEmail" value="Email" onfocus="if (this.value=='Email') this.value = ''" onblur="if (this.value.length == 0) this.value='Email'">
+          <input type="text" class="input-medium" id="student-cell-phone" name="studentCellPhone" value="Cell Phone (optional)" onfocus="if (this.value=='Cell Phone (optional)') this.value = ''" onblur="if (this.value.length == 0) this.value='Cell Phone (optional)'">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <select id="select01" name="grade" style="width: 300px;">
+            <option>Please select an option</option>
+            <option>Kindergarten</option>
+            <option>1st</option>
+            <option>2nd</option>
+            <option>3rd</option>
+            <option>4th</option>
+            <option>5th</option>
+            <option>6th</option>
+            <option>7th</option>
+            <option>8th</option>
+            <option>9th</option>
+            <option>10th</option>
+            <option>11th</option>
+            <option>12th</option>
+          </select>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Home Information</label>
+        <div class="controls">
+          <input type="text" class="input-large" id="street" name="street" value="Street Address" onfocus="if (this.value=='Street Address') this.value = ''" onblur="if (this.value.length == 0) this.value='Street Address'">
+          <input type="text" class="input-medium" id="city" name="city" value="City" onfocus="if (this.value=='City') this.value = ''" onblur="if (this.value.length == 0) this.value='City'">
+          <input type="text" class="input-small" id="zip" name="zip" value="Zip Code" onfocus="if (this.value=='Zip Code') this.value = ''" onblur="if (this.value.length == 0) this.value='Zip Code'">
+          <input type="text" class="input-medium" id="home-phone" name="homePhone" value="Home Phone" onfocus="if (this.value=='Home Phone') this.value = ''" onblur="if (this.value.length == 0) this.value='Home Phone'">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Parent 1 Information</label>
+        <div class="controls">
+          <input type="text" class="input-medium" id="p1-first-name" name="p1FirstName" value="First Name" onfocus="if (this.value=='First Name') this.value = ''" onblur="if (this.value.length == 0) this.value='First Name'">
+          <input type="text" class="input-medium" id="p1-last-name" name="p1LastName" value="Last Name" onfocus="if (this.value=='Last Name') this.value = ''" onblur="if (this.value.length == 0) this.value='Last Name'">
+          <input type="text" class="input-medium" id="p1-email" name="p1Email" value="Email" onfocus="if (this.value=='Email') this.value = ''" onblur="if (this.value.length == 0) this.value='Email'">
+          <input type="text" class="input-medium" id="p1-cell-phone" name="p1CellPhone" value="Cell Phone" onfocus="if (this.value=='Cell Phone') this.value = ''" onblur="if (this.value.length == 0) this.value='Cell Phone'">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Parent 2 Information (optional)</label>
+        <div class="controls">
+          <input type="text" class="input-medium" id="p2-first-name" name="p2FirstName" value="First Name" onfocus="if (this.value=='First Name') this.value = ''" onblur="if (this.value.length == 0) this.value='First Name' ">
+          <input type="text" class="input-medium" id="p2-last-name" name="p2LastName" value="Last Name" onfocus="if (this.value=='Last Name') this.value = ''" onblur="if (this.value.length == 0) this.value='Last Name' ">
+          <input type="text" class="input-medium" id="p2-email" name="p2Email" value="Email" onfocus="if (this.value=='Email') this.value = ''" onblur="if (this.value.length == 0) this.value='Email' ">
+          <input type="text" class="input-medium" id="p2-cell-phone" name="p2CellPhone" value="Cell Phone" onfocus="if (this.value=='Cell Phone') this.value = ''" onblur="if (this.value.length == 0) this.value='Cell Phone' ">          
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Referrer's Name or Coupon Code (optional)</label>
+        <div class="controls">
+          <input type="text" class="input-large" id="referrer-name" name="referrerName" value="Referrer's Name" onfocus="if (this.value=='Referrer\'s Name') this.value = ''" onblur="if (this.value.length == 0) this.value='Referrer\'s Name'">
+          <input type="text" class="input-large" id="coupon-code" name="couponCode" value="Coupon Code" onfocus="if (this.value=='Coupon Code') this.value = ''" onblur="if (this.value.length == 0) this.value='Coupon Code'">
+        </div>
+      </div>
+      <div class="form-actions">
+        <div id="whatIsStripe" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">What is Stripe?</h3>
+          </div>
+          <div class='modal-body'>
+            <p>
+                <a target="_blank" href='https://www.stripe.com'>Stripe</a> is an online payment tool like PayPal. It is safe and secure and you will not be charged for anything beyond the classes you sign up for.
+            </p>
+            <p>
+              Stripe accepts Visa, Mastercard, American Express, JCB, Discover, and Diners Club.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          </div>
+        </div>
+        <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+        <button type='button' class='btn' id="customButton">Pay with Credit Card</button>
+
+        <script>
+          $('#customButton').click(function(){
+            if (!($("#p1-email").val().match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i) != null)){
+                alert("Please enter valid email");
+            } else {
+                var token = function(res){
+                  var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+                  $('form').append($input).submit();
+                };
+                var amount = 0;
+                var classes = [
+                    $("#sat101-a").val(), 
+                    $("#sat25-a").val(), 
+                    $("#sat101-b").val(), 
+                    $("#sat25-b").val(), 
+                    $("#sun101-a").val(), 
+                    $("#sun25-a").val(), 
+                    $("#sun101-b").val(), 
+                    $("#sun25-b").val(), 
+                ];
+                for (var i = 0; i < classes.length; i++) {
+                    amount += getAmount(classes[i]);
+                }
+                console.log(amount);
+                
+
+                StripeCheckout.open({
+                  key:         'pk_live_8XNO9aL2dZlLLATzEPK9a11R',
+                  amount:      amount*100,
+                  panelLabel:  'Checkout',
+                  token:       token
+                });
+                return false;
+            }
+          });
+          function getAmount(str) {
+            if (str.indexOf("noclass") == -1) {
+              return 450;
+            }
+            else {
+              return 0;
+            }
+          }
+        </script>
+        <!--
+        <p>
+          <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="pk_test_czwzkTp2tactuLOEOqbMTRzG"></script>
+        </p>
+        -->
+        <!--<div class='stripe'>
+          <img src='/images/stripe.png' width='50px'>
+        </div>-->
+        <p>
+            <i class="icon-lock"></i>
+            我们使用的是现代化支付处理系统，称为<a href='https://www.stripe.com' target='_blank'>Stripe</a>。这比PayPal更安全，可靠和方便。条纹接受Visa, Mastercard, American Express, JCB, Discover, and Diners Club。
+        </p>
+        <img src='/images/credit_cards.png' width='150px'>
+        <!-- <a href="#whatIsStripe" role="button" class="whatisstripe" data-toggle="modal">What is Stripe?</a> -->
+      </div>
+    </fieldset>
+  </form>
+</div>

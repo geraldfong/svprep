@@ -3042,3 +3042,6 @@ ol.sequence li .range {
     margin-left:5px;
     font-size: 1.2em;
 }
+.switch {
+    font-size:0.7em !important;
+}

@@ -34,6 +34,7 @@ var register = function(app) {
 
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
+    app.set("view options", { layout: "layout.ejs" });
     // app.set('view options', { layout: false });
 
     var signupsCollection;
@@ -64,13 +65,29 @@ var register = function(app) {
       "sun101": "Sunday 10AM - 1PM",
       "sun25": "Sunday 2PM - 5PM"
     }
+    var language = function(req, res, page, source) {
+        if (req.query.lang != "ch") {
+            if (!source) {
+                app.set("view options", { layout: "layout.ejs" });
+            }
+            return page;
+        }
+        if (!source) {
+            app.set("view options", { layout: "layout_ch.ejs" });
+        } else {
+            return page;
+        }
+        return page+"_ch";
+    }
 
     app.get('/', function (req, res) {
-      res.render('index', { page: 'home' });
+      var page = language(req, res, "index");
+      res.render(page, { page: 'home' });
     });
 
     app.get('/signup', function (req, res) {
-      res.render('signup', { page: 'signup' });
+      var page = language(req, res, "signup");
+      res.render(page, { page: 'signup' });
     });
 
     app.post('/signup-confirm', function (req, res) {
@@ -137,23 +154,28 @@ var register = function(app) {
     */
 
     app.get('/courses', function (req, res) {
-      res.render('courses', { page: 'courses' });
+      var page = language(req, res, "courses");
+      res.render(page, { page: 'courses' });
     });
 
     app.get('/faq', function (req, res) {
-      res.render('faq', { page: 'faq' });
+      var page = language(req, res, "faq");
+      res.render(page, { page: 'faq' });
     });
 
     app.get('/testimonials', function (req, res) {
-      res.render('testimonials', { page: 'testimonials' });
+      var page = language(req, res, "testimonials", true);
+      res.render(page, { page: 'testimonials' });
     });
 
     app.get('/discounts', function (req, res) {
-      res.render('discounts', { page: 'discounts' });
+      var page = language(req, res, "discounts");
+      res.render(page, { page: 'discounts' });
     });
 
     app.get('/logistics', function (req, res) {
-      res.render('logistics', { page: 'logistics' });
+      var page = language(req, res, "logistics");
+      res.render(page, { page: 'logistics' });
     });
 
     app.get('/aboutus', function (req, res) {
@@ -161,7 +183,8 @@ var register = function(app) {
     });
 
     app.get('/instructors', function (req, res) {
-      res.render('instructors', { page: 'instructors' });
+      var page = language(req, res, "instructors", true);
+      res.render(page, { page: 'instructors' });
     });
 
     app.get('/tos', function (req, res) {
