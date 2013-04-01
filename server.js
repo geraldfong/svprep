@@ -86,7 +86,7 @@ var register = function(app) {
     });
 
     app.get('/signup', function (req, res) {
-      var page = language(req, res, "signup");
+      var page = language(req, res, "signup", true);
       res.render(page, { page: 'signup' });
     });
 
@@ -154,12 +154,12 @@ var register = function(app) {
     */
 
     app.get('/courses', function (req, res) {
-      var page = language(req, res, "courses");
+      var page = language(req, res, "courses", true);
       res.render(page, { page: 'courses' });
     });
 
     app.get('/faq', function (req, res) {
-      var page = language(req, res, "faq");
+      var page = language(req, res, "faq", true);
       res.render(page, { page: 'faq' });
     });
 
@@ -169,12 +169,12 @@ var register = function(app) {
     });
 
     app.get('/discounts', function (req, res) {
-      var page = language(req, res, "discounts");
+      var page = language(req, res, "discounts", true);
       res.render(page, { page: 'discounts' });
     });
 
     app.get('/logistics', function (req, res) {
-      var page = language(req, res, "logistics");
+      var page = language(req, res, "logistics", true);
       res.render(page, { page: 'logistics' });
     });
 
