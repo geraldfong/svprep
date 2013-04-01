@@ -1628,7 +1628,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
     float: left;
     display: block;
     padding: 8px 0px 12px;
-    margin-left: -20px;
+    margin-left: 0px;
     color: #fff;
     font-size: 20px;
     font-weight: 200;
@@ -1718,7 +1718,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 .topbar div>ul, .nav {
     display: block;
     float: left;
-    margin: 0 10px 0 0;
+    margin: 0 0px 0 0;
     position: relative;
     left: 0;
 }
@@ -1729,7 +1729,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 .topbar div>ul a, .nav a {
     display: block;
     float: none;
-    padding: 10px 8px 11px;
+    padding: 10px 5px 11px;
     line-height: 19px;
     text-decoration: none;
     font-weight: bold;
@@ -2698,8 +2698,8 @@ body {
 }
 .topbar .header {
     background-color: #f8f8f8;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 9px 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    padding: 9px 0 4px 0;
 }
 .topbar .nav a, .topbar .secondary-nav a {
     font-size: 14px;
@@ -2738,9 +2738,10 @@ body {
 	background: url(/images/hero-bg.png) repeat;
     border-bottom: 1px solid #e1e1e1;
     margin-bottom: 30px;
-    margin-top:27px;
+    margin-top:0px;
     padding: 30px 0 31px;
 }
+
 .hero h1, .hero h2, .hero h3 {
 /*    color: #454545;*/
 	color: white;
