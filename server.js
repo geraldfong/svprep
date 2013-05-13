@@ -13,11 +13,9 @@ var app_http = express.createServer();
 
 
 var options = {
-    key:    fs.readFileSync('svprep.org.key'),
-    cert:   fs.readFileSync('sharad.cert'),
-    ca:     fs.readFileSync('ca.pem'),
-    requestCert:        true,
-    rejectUnauthorized: false
+    key:    fs.readFileSync('../ssl/ssl.key'),
+    cert:   fs.readFileSync('../ssl/ssl.crt'),
+    ca:     fs.readFileSync('../ssl/sub.class1.server.ca.pem'),
 };
 
 var app_secure = express.createServer(options);

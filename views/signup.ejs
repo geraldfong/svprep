@@ -6,10 +6,10 @@
 <div class='container content'>
   <div style="margin-bottom:30px;">
     <p>
-      Welcome to the sign-up page! You may sign your child up for up to <b>four</b> classes <b>each session</b>. Classes cost a flat rate of $450, which you do not have to pay today! We will e-mail you before the first week of classes to confirm the total cost of the program after subtracting all your discounts; you are not obligated to pay anything until the day of the first class! Additionally, the first day of class is <b>absolutely FREE</b>. If you don't want to continue the program after the first class, we will give you a <b>FULL refund</b>, no questions asked.
+      Welcome to the sign-up page! You may sign your child up for up to <b>four</b> classes <b>each session</b>. Classes cost a flat rate of $400, which you do not have to pay today. To register you must enter your credit card information but we will not charge you until after the first day of class. You will receive an e-mail before we charge you which states the total cost of the program after subracting all discounts. Additionally, the first day of class is <b>absolutely FREE</b>. If you don't want to continue the program after the first class, we will give you a <b>FULL refund</b>, no questions asked.
     </p>
 	  <p>
-      Please select classes based on the day and time drop-down menus below. Given the nature of our classes, we can only offer certain courses if there is sufficient interest. As classes are contingent upon demand and instructor availabilities, we will confirm your child’s enrollment as soon as possible, and a final confirmation email will be sent at the latest on <b>April 16th</b>.
+      Please select classes based on the day and time drop-down menus below. Given the nature of our classes, we can only offer certain courses if there is sufficient interest. As classes are contingent upon demand and instructor availabilities, we will confirm your child’s enrollment as soon as possible, and a final confirmation email will be sent at the latest on <b>May 1st</b>.
     </p>
     <p>
       If you have any further questions, do not hesitate to contact us at contact@svprep.org! Thank you for choosing Silicon Valley Prep; we will be in touch via e-mail as the program start dates approach.
@@ -206,7 +206,7 @@
         </div>
         <script src="https://checkout.stripe.com/v2/checkout.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-        <button type='button' class='btn' id="customButton">Pay with Credit Card</button>
+        <button type='button' class='btn' id="customButton">Register with Credit Card</button>
 
         <script>
           $('#customButton').click(function(){
@@ -244,12 +244,15 @@
             }
           });
           function getAmount(str) {
+            return 0;
+            // Commented out by gerald because 450 not accurate if there are discounts
+            /*
             if (str.indexOf("noclass") == -1) {
               return 450;
             }
             else {
               return 0;
-            }
+            }*/
           }
         </script>
         <!--
@@ -262,6 +265,7 @@
         </div>-->
         <p>
             <i class="icon-lock"></i>
+            SVPrep will not charge you until after the first day of class and after a confirmation email.
             We are using a modern payment processing system called <a target="_blank" href='https://www.stripe.com'>Stripe</a>. It is more safe, secure and convenient than PayPal.
             Stripe accepts Visa, Mastercard, American Express, JCB, Discover, and Diners Club.
         </p>
